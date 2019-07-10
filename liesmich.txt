@@ -1,0 +1,54 @@
+News Box Manager 2.2.1 für Zen Cart 1.5.6 deutsch
+
+Anpassung des Moduls von lat9 (https://www.zen-cart.com/downloads.php?do=file&id=1968) für die deutsche Zen Cart Version
+2017-2019 webchills (www.webchills.at)
+
+Changelog:
+
+2.2.1
+2019-07-10
+Anpassungen für 1.5.6 und PHP 7.3
+Für die Newsbeiträge können nun Metatags hinterlegt werden
+Menüeintrag von Lokalisation nach Tools verschoben
+
+Changelog:
+2.1.2 
+2017-05-26
+Bugfixes aus dem Support Thread integriert, see
+https://www.zen-cart-pro.at/forum/forums/126-News-Box-Manager
+
+General Public License
+
+Mit dieser Erweiterung können via Shopadministration Newsbeiträge verfasst werden, die dann im Shop entweder auf der Startseite oder in einer Sidebox angezeigt werden.
+Die Beiträge können optional mit einem Start- und/oder Enddatum versehen werden.
+Veröffentlichte Beiträge erscheinen zusätzlich in einem Newsarchiv.
+Newsbeiträge sind multilingual möglich, so dass deutsche Beiträge nur in der deutschen und englische nur in der englischen Version angezeigt werden.
+
+Installation:
+
+1)
+Im Ordner NEUE DATEIEN den Ordner DEINADMIN auf den Namen des Adminverzeichnisses umbenennen.
+Alle Ordner namens DEINTEMPLATE auf den Namen des im Shop aktiven Templates umbenennen.
+Dann den Inhalt in der vorgegebenen Struktur hochladen, es werden dabei keine bestehenden Dateien überschrieben.
+
+2)
+Im Ordner GEAENDERTE DATEIEN den Ordner DEINTEMPLATE auf den Namen des im Shop aktiven Templates umbenennen.
+Vergleichen Sie nun die tpl_index_default.php mit der aus Ihrem Shop und nehmen die Änderung manuell vor, es wird lediglich ein Bereich eingefügt, in dem dann die News auf der Startseite angezeigt werden können:
+<?php
+//-bof-news_box_manager-lat9  *** 1 of 1 ***
+  require ($template->get_template_dir('tpl_modules_news_box_format.php', DIR_WS_TEMPLATE, $current_page_base, 'templates'). '/tpl_modules_news_box_format.php');
+//-eof-news_box_manager-lat9  *** 1 of 1 ***
+?>
+
+3)
+In die Zen Cart Administration einloggen und auf irgendeinen Menüpunkt clicken.
+Unter Konfiguration ist nun der neue Menüpunkt News Box Manager vorhanden. Hier wie gewünscht einstellen.
+Das Verfassen der Newsbeiträge erfolgt dann mit dem neuen Menüpunkt Tools > News Box Manager
+Die Sidebox kann unter Tools > Boxlayout aktiviert werden.
+
+
+Deinstallation
+
+Die geänderte tpl_index_default.php wieder mit der aus Ihrem Backup ersetzen.
+Alle von diesem Modul neu hinzugefügten Dateien vom Server löschen
+Im Ordner SQL die uninstall.sql mit einem Texteditor öffnen, Inhalt kopieren und ins Eingabefeld unter Tools > SQL Patches installieren einfügen und absenden
