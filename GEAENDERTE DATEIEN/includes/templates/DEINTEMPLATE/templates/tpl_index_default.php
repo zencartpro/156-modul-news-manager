@@ -7,10 +7,10 @@
  * Centerboxes are called as necessary
  *
  * @package templateSystem
- * @copyright Copyright 2003-2019 Zen Cart Development Team
+ * @copyright Copyright 2003-2020 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart-pro.at/license/2_0.txt GNU Public License V2.0
- * @version $Id: tpl_index_default.php for News Manager 2019-07-10 19:49:16Z webchills $
+ * @version $Id: tpl_index_default.php for News Manager 2020-08-07 17:02:16Z webchills $
  */
 ?>
 <div class="centerColumn" id="indexDefault">
@@ -41,7 +41,10 @@
 
 <?php
 //-bof-news_box_manager-lat9  *** 1 of 1 ***
-  require ($template->get_template_dir('tpl_modules_news_box_format.php', DIR_WS_TEMPLATE, $current_page_base, 'templates'). '/tpl_modules_news_box_format.php');
+$mnbf = $template->get_template_dir('tpl_modules_news_box_format.php', DIR_WS_TEMPLATE, $current_page_base, 'templates') . '/tpl_modules_news_box_format.php';
+if (file_exists($mnbf)) {
+    require $mnbf;
+}
 //-eof-news_box_manager-lat9  *** 1 of 1 ***
 ?>
 
