@@ -1,9 +1,16 @@
-News Box Manager 2.2.1 für Zen Cart 1.5.6 deutsch
+News Box Manager 3.1.0 für Zen Cart 1.5.6 deutsch
 
 Anpassung des Moduls von lat9 (https://www.zen-cart.com/downloads.php?do=file&id=1968) für die deutsche Zen Cart Version
-2017-2019 webchills (www.webchills.at)
+2017-2020 webchills (www.webchills.at)
 
 Changelog:
+
+
+3.1.0
+2020-08-07
+Komplette Neustrukturierung des Moduls durch lat9
+Es sind nun 4 verschiedene Newskategorien möglich, die Anzeige kann individuell in 2 Sideboxen und/oder der Startseite und auf der neuen Seite Alle Artikel (früheres Newsarchiv) erfolgen.
+Alte Versionen des Moduls werden automatisch aktualisiert.
 
 2.2.1
 2019-07-10
@@ -22,7 +29,12 @@ General Public License
 Mit dieser Erweiterung können via Shopadministration Newsbeiträge verfasst werden, die dann im Shop entweder auf der Startseite oder in einer Sidebox angezeigt werden.
 Die Beiträge können optional mit einem Start- und/oder Enddatum versehen werden.
 Veröffentlichte Beiträge erscheinen zusätzlich in einem Newsarchiv.
-Newsbeiträge sind multilingual möglich, so dass deutsche Beiträge nur in der deutschen und englische nur in der englischen Version angezeigt werden.
+Newsbeiträge sind multilingual.
+Seit Version 3.1.0 muss jeder Newsbeitrag in allen im Shop aktiven Sprachen einen Title und einen Inhalt haben, sonst wird er generell nicht angezeigt
+Seit Version 3.1.0 kann mit Newstypen/Newskategorien gearbeitet werden, aus denen sich dann die Beiträge speisen, z.B.
+Typ1 = Termine, Typ2 = Neuerscheinungen, Typ 3 = Veranstaltungen, Typ 4 = Aktionen
+In den Admin Profilen können unterschiedliche Admins für das Erstellen nur bestimmter Newskategoriebeiträge hinterlegt werden
+Seit Version 3.1.0 wird für die Newsbeiträge automatisch auch - falls installiert - das Modul Sitemap XML unterstützt, das die Beiträge dann in die Sitemap aufnimmt.
 
 Installation:
 
